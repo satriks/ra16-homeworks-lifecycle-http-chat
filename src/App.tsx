@@ -24,7 +24,7 @@ function App() {
 
     const getMessages =  async (id: string) => {
       const data = await MessageService.getMessages(id)
-      setMessages([...messages, ...data])
+      setMessages([...messages, ...data]) 
       
       
     }
@@ -35,7 +35,9 @@ function App() {
       }, 5000 )
 
     
-  }, [])
+  }, 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  [])
 
   return (
     <div className='chat__wrapper'>
